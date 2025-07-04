@@ -1,38 +1,136 @@
-.App {
+/* === Umum === */
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #ffe6e6, #f9f9f9);
+  color: #333;
+}
+
+/* === Section === */
+.section {
+  padding: 60px 20px;
+  margin-bottom: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+/* === Container === */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* === Foto Profil === */
+.profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #a12525;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profile-img:hover {
+  transform: scale(1.05);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* === Judul Section === */
+.section-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #a12525;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  width: 100%;
+}
+
+/* === Lead Text === */
+.lead {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #666;
+  width: 100%;
+}
+
+/* === Info List === */
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #444;
+  text-align: left;
+  background-color: #fff8f8;
+  padding: 25px 30px;
+  border-radius: 12px;
+  border-left: 5px solid #ffcccc;
+  flex: 1;
+  min-width: 280px;
+}
+
+.info-list li {
+  margin-bottom: 12px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.info-list li strong {
+  color: #a12525;
+  margin-left: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+/* === Footer === */
+.site-footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+  color: #888;
+  width: 100%;
+}
+
+/* === Spinner (Loading) === */
+.spinner {
+  margin: 20px auto;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #a12525;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .info-list {
+    text-align: center;
+  }
+
+  .info-list li {
+    justify-content: center;
+    text-align: center;
   }
 }
